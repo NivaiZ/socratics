@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: @extra-font;
+  background-color: @background-color;
+}
+
+.main {
+  padding-bottom: 50px;
+}
+
+ul {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+img {
+  object-fit: contain;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: @phone) {
+    padding: 0 20px 0 20px;
+  }
+}
+
+.visually__hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.visually__hidden--reset {
+  width: unset;
+  height: unset;
+  margin: -unset;
+  border: unset;
+  padding: unset;
+  white-space: unset;
+  clip-path: unset;
+  clip: unset;
+  overflow: unset;
+}

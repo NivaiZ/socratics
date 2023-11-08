@@ -1,0 +1,131 @@
+.frame__label {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: @extra-font;
+}
+
+.frame__input {
+  font-family: @extra-font;
+  border: 1.25px solid @basic-gray;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  padding: 17.5px 15px 17.5px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &::placeholder {
+    color: @basic-grey;
+  }
+
+  &:focus {
+    outline: 1.25px solid @basic-blue;
+  }
+}
+
+.frame__item {
+  position: relative;
+  margin-left: 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media (max-width: @phone) {
+    margin-left: 0;
+  }
+}
+
+.frame__width {
+  width: 100%;
+}
+
+.frame__label {
+  position: absolute;
+  z-index: 1;
+  top: -7px;
+  left: 22px;
+  background-color: @basic-white;
+}
+
+.frame__input--placeholder {
+  display: flex;
+  align-items: center;
+  color: @basic-grey;
+  background-color: transparent;
+  cursor: pointer;
+  width: 125px;
+  height: 100%;
+
+  @media (max-width: @phone) {
+    width: 100%;
+    min-height: 57px;
+  }
+}
+
+.frame__dropdown {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+
+.frame__dropdown--js {
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: @basic-white;
+  border-radius: 12px;
+  border: 1.25px solid @basic-gray;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+}
+
+.frame__input--choose {
+  color: @basic-black;
+}
+
+.frame__wrapper {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  pointer-events: none;
+}
+
+[data-dropdown="button"][aria-expanded="true"]+.frame__wrapper {
+  transition: 0.5s ease;
+  transform: rotate(180deg);
+}
+
+[data-dropdown="button"][aria-expanded="false"]+.frame__wrapper {
+  transition: 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.frame__close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  display: none;
+}
+
+.frame__textarea {
+  resize: none;
+  white-space: unset;
+  overflow: unset;
+  text-overflow: unset;
+}
+
+.frame__status {
+  .visually__hidden();
+}
