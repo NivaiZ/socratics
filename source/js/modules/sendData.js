@@ -16,6 +16,7 @@ export function sendDataOnServer() {
         } else {
           const formData = new FormData(form);
           formData.forEach((value, key) => {
+            console.log(value, key);
           });
         }
       }
