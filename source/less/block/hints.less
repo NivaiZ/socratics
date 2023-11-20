@@ -16,16 +16,17 @@
   align-items: center;
   justify-content: center;
 
+  &:hover {
+    transition: 0.5s ease;
+    background-color: @basic-black;
+    color: @basic-white;
+  }
+
   @media (max-width: @phone) {
     min-width: 235px;
   }
 }
 
-.hints__radio:checked+.hints__sign {
-  transition: 0.5s ease;
-  background-color: @basic-black;
-  color: @basic-white;
-}
 
 .hints__list {
   display: flex;
